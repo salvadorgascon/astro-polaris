@@ -1,4 +1,4 @@
-# astro-polaris
+# Polaris
 Astro template for building websites
 
 ```sh
