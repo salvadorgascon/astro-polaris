@@ -1,0 +1,7 @@
+---
+const hasTitle = Astro.slots.has('title');
+---
+<div class="rounded-lg p-4 bg-danger-soft border border-danger text-danger">
+  {hasTitle && <h4><slot name="title"/></h4>}
+  <p><slot/></p>
+</div>
