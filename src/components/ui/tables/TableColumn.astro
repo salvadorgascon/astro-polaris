@@ -1,0 +1,19 @@
+---
+interface Props {
+  align?: "left" | "center" | "right";
+}
+
+const { align = "left" } = Astro.props;
+---
+<th
+  class:list={[
+    "px-4 py-3 align-bottom font-semibold",
+    {
+      "text-left": align === "left",
+      "text-center": align === "center",
+      "text-right": align === "right",
+    },
+  ]}
+>
+  <slot />
+</th>

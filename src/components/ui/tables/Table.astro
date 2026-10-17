@@ -1,0 +1,17 @@
+---
+const hasColumns = Astro.slots.has('columns');
+---
+<figure class="prose lg:prose-xl max-w-none mt-10">
+  <table class="w-full">
+     {hasColumns && (
+      <thead>
+        <tr class="border-b border-stone-300">
+          <slot name="columns" />
+        </tr>
+      </thead>
+    )}
+    <tbody>
+      <slot name="rows"/>
+    </tbody>
+  <table>
+</figure>
