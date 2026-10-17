@@ -1,0 +1,8 @@
+---
+interface Props {  
+  height?: number;
+}
+
+const { height = 10 } = Astro.props;
+---
+<div style={`height: ${height}px`} aria-hidden="true"></div>
