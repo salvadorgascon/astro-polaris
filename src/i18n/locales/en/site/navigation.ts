@@ -1,17 +1,18 @@
-import type { NavigationLiteralItem, NavigationLiteralLink } from '@/config/core/navigation.types';
-
-const primaryLinks: NavigationLiteralItem[] = [
-  { label: 'Home', hint: 'Home' }  
-];
-
 export const navigation = {
-  top: { links: [] as NavigationLiteralLink[] },
+  top: { links: {} },
   header: {
-    desktopPrimary: { links: primaryLinks },
-    mobilePrimary: { links: primaryLinks },
+    desktopPrimary: { links: {
+      home: { label: 'Home', hint: 'Home' },
+    },
+    },
+    mobilePrimary: { links: {
+      home: { label: 'Home', hint: 'Home' },
+    }
+    },
   },
   bottom: {
-    links: [      
-    ] as NavigationLiteralLink[],
+    links: {
+
+    },
   },
 } as const;
