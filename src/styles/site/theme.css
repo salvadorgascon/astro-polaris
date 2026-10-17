@@ -1,0 +1,94 @@
+@theme {
+  /* Font families, requires modify astro.config.mjs */
+  --font-display: var(--font-display-family), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: var(--font-body-family), system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Default content color: paragraphs, labels and general content */
+  --color-content: #222222;
+
+  /* Muted content color: descriptions, metadata and supporting content */
+  --color-content-muted: #6b6b6b;
+
+  /* Strong content color: headings, titles and important values */
+  --color-content-strong: #1a1a1a;
+
+  /* Interactive text color: links and text-based actions */
+  --color-content-link: #1f3d7a;
+
+  /* Emphasized interactive text: highlighted or hovered links */
+  --color-content-link-emphasis: #162c5a;
+
+  /* Brand palette: raw color values used to create semantic roles */
+
+  /* Lightest brand tint: soft backgrounds */
+  --color-brand-50: #effbff;
+
+  /* Very light brand tint: subtle backgrounds */
+  --color-brand-100: #dff7ff;
+
+  /* Light brand tint: soft borders and decorative details */
+  --color-brand-200: #b8efff;
+
+  /* Light accent: borders and low-emphasis accents */
+  --color-brand-300: #7de3ff;
+
+  /* Bright accent: soft accent roles */
+  --color-brand-400: #36d0f5;
+
+  /* Main brand color: primary accent */
+  --color-brand-500: #00a9e0;
+
+  /* Dark accent: emphasized accent elements */
+  --color-brand-600: #0088b8;
+
+  /* Darker accent: active or pressed elements */
+  --color-brand-700: #006f96;
+
+  /* Very dark brand tone: strong accent elements */
+  --color-brand-800: #005d7d;
+
+  /* Deep brand tone: high-contrast accent elements */
+  --color-brand-900: #064d67;
+
+  /* Darkest brand tone: maximum contrast */
+  --color-brand-950: #033246;
+
+  /* Main accent: primary actions, highlights and brand elements */
+  --color-accent: var(--color-brand-500);
+
+  /* Emphasized accent: hover and highlighted accent elements */
+  --color-accent-emphasis: var(--color-brand-600);
+
+  /* Active accent: pressed, selected or currently active elements */
+  --color-accent-active: var(--color-brand-700);
+
+  /* Soft accent: borders, subtle backgrounds and decorative details */
+  --color-accent-soft: var(--color-brand-400);
+
+  /* Main page background */
+  --color-page: whitesmoke;
+
+  /* Main surface for content areas, panels and containers */
+  --color-surface: whitesmoke;
+
+  /* Alternative surface for visually differentiated sections */
+  --color-surface-alt: var(--color-brand-50);
+
+  /* Soft surface for low-emphasis sections and supporting areas */
+  --color-surface-soft: var(--color-brand-100);
+
+  /* Interface roles: actions, statuses, feedback and badges */
+  --color-primary: #1b84ff;
+  --color-secondary: #6b7280;
+  --color-success: #17c653;
+  --color-info: #7239ea;
+  --color-warning: #f6c000;
+  --color-danger: #f8285a;
+
+  --color-primary-soft: #e9f3ff;
+  --color-secondary-soft: #f1f1f4;
+  --color-info-soft: #f8f5ff;
+  --color-warning-soft: #fff8dd;
+  --color-danger-soft: #ffeef3;
+  --color-success-soft: #dfffea;
+}
