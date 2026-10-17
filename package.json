@@ -32,6 +32,9 @@
     "esbuild": true
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.10"
+    "@astrojs/check": "^0.9.10",
+    "@types/mustache": "^4.2.6",
+    "@types/node": "^26.6.5",
+    "@types/nodemailer": "^8.0.2"
   }
 }
