@@ -158,4 +158,16 @@ dist/
 
 # jetbrains setting folder
 .idea/
+
 .vercel
+.vercel/
+
+graphify-out/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+.playwright-cli/
