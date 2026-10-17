@@ -1,0 +1,11 @@
+---
+interface Props {
+  id: string;
+  action: string;
+}
+
+const { id, action } = Astro.props;
+---
+<form id={id} class="w-full space-y-4" method="POST" action={action}>
+  <slot/>
+</form>
