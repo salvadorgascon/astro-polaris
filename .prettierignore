@@ -1,0 +1,10 @@
+.astro/
+.vercel/
+dist/
+node_modules/
+graphify-out/
+test-results/
+playwright-report/
+.changeset
+coverage
+build
