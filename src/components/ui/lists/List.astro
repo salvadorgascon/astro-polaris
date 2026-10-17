@@ -1,0 +1,14 @@
+---
+interface Props {
+  align?: "left" | "center";
+  class?: string;  
+}
+
+const { align = "left", class: className = '' } = Astro.props;
+---
+<ul class:list={[
+  'mb-5 space-y-3', 
+  { "mx-auto w-fit": align === "center" },
+  className]}>
+  <slot/>
+</ul>
