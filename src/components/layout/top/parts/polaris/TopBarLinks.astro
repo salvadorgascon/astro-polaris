@@ -1,0 +1,26 @@
+---
+import { navigation } from '@/config/site/navigation';
+import { siteSettings } from '@/config/site/settings';
+import type { LocalizedNavigationLinks } from '@/i18n/types/navigation.types';
+import type { NavigationLink } from '@/config/types/navigation.types';
+import { ui } from '@/i18n/ui';
+
+import LinkText from '@/components/ui/links/LinkText.astro';
+
+const locale = ui[siteSettings.defaultLocale];
+const topLinks: [string, NavigationLink][] = Object.entries(navigation.top.links);
+const localizedTopLinks: LocalizedNavigationLinks = locale.site.navigation.top.links;
+---
+<div class="ml-auto flex items-center gap-2">
+  {/* Renders each localized top-bar link with separators. */}
+  {topLinks.map(([key, link], index) => {
+    const text = localizedTopLinks[key]?.label ?? '';
+
+    return (
+      <Fragment>
+        {index > 0 && <p> • </p>}
+        <span><LinkText url={link.route}>{text}</LinkText></span>
+      </Fragment>
+    );
+  })}
+</div>

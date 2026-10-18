@@ -1,0 +1,23 @@
+---
+import Bottom from '@/components/layout/bottom/site/Bottom.astro';
+import BottomBarLinks from '@/components/layout/bottom/parts/polaris/BottomBarLinks.astro';
+import { ui } from '@/i18n/ui';
+
+import { siteSettings } from '@/config/site/settings';
+
+const currentYear = new Date().getFullYear();
+
+const locale = ui[siteSettings.defaultLocale];
+---
+<div class="bg-surface py-5">
+  <div class="mx-auto w-full max-w-7xl  px-4 sm:px-6 lg:px-8">				
+    <div class="flex items-center">
+      <span>© {currentYear} {locale.site.metadata.siteName} • {locale.site.metadata.tagline}</span>
+      <Bottom/>
+      <BottomBarLinks/>
+    </div>
+  </div>	
+</div>		
+
+
+
