@@ -1,18 +1,19 @@
+import type { LocalizedNavigationLinks } from '@/i18n/types/navigation.types';
+
+const primaryLinks: LocalizedNavigationLinks = {
+  home: { label: 'Home', hint: 'Home' },
+};
+
+const bottomLinks: LocalizedNavigationLinks = {};
+const topLinks: LocalizedNavigationLinks = {};
+
 export const navigation = {
-  top: { links: {} },
+  top: { links: topLinks },
   header: {
-    desktopPrimary: { links: {
-      home: { label: 'Home', hint: 'Home' },
-    },
-    },
-    mobilePrimary: { links: {
-      home: { label: 'Home', hint: 'Home' },
-    }
-    },
+    desktopPrimary: { links: primaryLinks },
+    mobilePrimary: { links: primaryLinks },
   },
   bottom: {
-    links: {
-
-    },
+    links: bottomLinks,
   },
 } as const;

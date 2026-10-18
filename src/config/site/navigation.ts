@@ -1,18 +1,27 @@
-import type { NavigationRouteItem } from '@/config/core/navigation.types';
 import { routes } from '@/config/site/routes';
+import type { NavigationLinks } from '@/config/types/navigation.types';
 
-const primaryLinks: NavigationRouteItem[] = [  
-];
+const topLinks: NavigationLinks = {  
+};
+
+const desktopPrimaryLinks: NavigationLinks = {
+  home: { route: routes.home },
+};
+
+const mobilePrimaryLinks: NavigationLinks = {
+  home: { route: routes.home },
+};
+
+const bottomLinks: NavigationLinks = {  
+};
 
 export const navigation = {
-  en: {
-    top: { links: [] },
-    header: {
-      desktopPrimary: { links: primaryLinks },
-      mobilePrimary: { links: primaryLinks },
-    },
-    bottom: {
-      links: [],
-    },
-  }  
+  top: { links: topLinks },
+  header: {
+    desktopPrimary: { links: desktopPrimaryLinks },
+    mobilePrimary: { links: mobilePrimaryLinks },
+  },
+  bottom: {
+    links: bottomLinks,
+  },
 } as const;

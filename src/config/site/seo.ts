@@ -1,4 +1,4 @@
-import type { FacebookMetaConfig, XMetaConfig } from '@/config/core/seo.types';
+import type { FacebookMetaConfig, XMetaConfig } from '@/config/types/seo.types';
 
 export const seoConfig = {
   openGraph: {

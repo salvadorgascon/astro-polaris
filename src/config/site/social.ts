@@ -1,4 +1,4 @@
-import type { SocialNetworkName, SocialProfile } from '@/config/core/social.types';
+import type { SocialNetworkName, SocialProfile } from '@/config/types/social.types';
 
 export const socialConfig: Record<SocialNetworkName, SocialProfile | undefined> = {
   x:{    
