@@ -1,8 +1,8 @@
-import { footerSocialLinks } from './footer_social_links';
-import { footerCategoryLinks } from './footer_category_links';
+import { footerSocial } from './footer_social';
+import { footerCategory } from './footer_category';
 
 export const components = {  
-  footerSocialLinks,
-  footerCategoryLinks,
+  footerSocial,
+  footerCategory,
 } as const;
 

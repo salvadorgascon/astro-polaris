@@ -1,3 +1,3 @@
-export const footerSocialLinks = {
+export const footerSocial = {
   title: 'Follow Us',  
 } as const;

@@ -1,4 +1,4 @@
-export const socialLinks = {  
+export const social = {  
   whatsapp: 'WhatsApp',
   whatsappChannel: 'WhatsApp Channel',
   newsletter: 'Newsletter',
