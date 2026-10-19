@@ -1,27 +1,36 @@
 import { routes } from '@/config/site/routes';
-import type { NavigationLinks } from '@/config/types/navigation.types';
+import type { NavigationLinks, NavigationMenu } from '@/config/types/navigation.types';
 
-const topLinks: NavigationLinks = {  
+import { ui } from '@/i18n/ui';
+
+const enTopLinks: NavigationLinks = {  
 };
 
-const desktopPrimaryLinks: NavigationLinks = {
-  home: { route: routes.home },
+const enDesktopPrimaryLinks: NavigationMenu = {
+  home: { 
+    label: ui.en.site.navigation.header.desktopPrimary.home,
+    route: routes.home },
 };
 
-const mobilePrimaryLinks: NavigationLinks = {
-  home: { route: routes.home },
+const enMobilePrimaryLinks: NavigationMenu = {
+  home: { 
+    label: ui.en.site.navigation.header.mobilePrimary.home,
+    route: routes.home },
 };
 
 const bottomLinks: NavigationLinks = {  
 };
 
 export const navigation = {
-  top: { links: topLinks },
-  header: {
-    desktopPrimary: { links: desktopPrimaryLinks },
-    mobilePrimary: { links: mobilePrimaryLinks },
-  },
-  bottom: {
-    links: bottomLinks,
-  },
+  en:{
+    top: { links: enTopLinks },
+    header: {
+      desktopPrimary: { links: enDesktopPrimaryLinks },
+      mobilePrimary: { links: enMobilePrimaryLinks },
+    },
+    bottom: {
+      links: bottomLinks,
+    },
+  }
+  
 } as const;
