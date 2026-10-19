@@ -1,13 +1,16 @@
 import { metadata } from './metadata';
 import { navigation } from './navigation';
 import { regional } from './regional';
-import { footerSocialLinks } from './footer_social_links';
+import { components } from './components/';
+import { pages } from './pages/';
+
 
 
 export const site = {
   metadata,
   navigation,
   regional,
-  footerSocialLinks,
+  components,
+  pages,
 } as const;
 
