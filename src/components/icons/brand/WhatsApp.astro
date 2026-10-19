@@ -1,0 +1,11 @@
+---
+interface Props {
+  size?: number | string;
+  class?: string;  
+}
+
+const { size = 24, class: className = '' } = Astro.props;
+
+import WhatsappIcon from '@/assets/images/ui/icons/whatsapp.svg';
+---
+<WhatsappIcon width={size} height={size} class={className}/>

@@ -1,0 +1,11 @@
+---
+interface Props {
+  size?: number | string;
+  class?: string;  
+}
+
+const { size = 24, class: className = '' } = Astro.props;
+
+import { Rss as RssIcon } from '@lucide/astro';
+---
+<RssIcon size={size} class={className}/>

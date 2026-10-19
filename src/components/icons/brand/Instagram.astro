@@ -1,0 +1,11 @@
+---
+interface Props {
+  size?: number | string;
+  class?: string;  
+}
+
+const { size = 24, class: className = '' } = Astro.props;
+
+import InstagramIcon from '@/assets/images/ui/icons/instagram.svg';
+---
+<InstagramIcon width={size} height={size} class={className}/>

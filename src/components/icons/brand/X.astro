@@ -1,0 +1,11 @@
+---
+interface Props {
+  size?: number | string;
+  class?: string;  
+}
+
+const { size = 24, class: className = '' } = Astro.props;
+
+import XIcon from '@/assets/images/ui/icons/x.svg';
+---
+<XIcon width={size} height={size} class={className}/>
