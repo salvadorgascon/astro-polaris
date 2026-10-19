@@ -10,7 +10,7 @@ const t = useTranslations(locale);
 ---
 <div class="ml-auto flex items-center gap-2">
   {/* Renders each localized bottom-bar link with separators. */}
-  {Object.entries(navigation.en.bottom).map(([key, link], index) => {
+  {Object.entries(navigation[locale].bottom).map(([key, link], index) => {
     return (
       <Fragment>
         {index > 0 && <p> • </p>}

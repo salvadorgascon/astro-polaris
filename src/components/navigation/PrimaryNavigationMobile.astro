@@ -11,7 +11,7 @@ const t = useTranslations(locale);
 >
   <ul class="flex flex-col gap-4">
     {/* Renders each primary mobile navigation item. */}
-    {Object.entries(navigation.en.header.mobilePrimary).map(([key, item]) => (
+    {Object.entries(navigation[locale].header.mobilePrimary).map(([key, item]) => (
       <li>
         <a
           class="font-display block uppercase font-bold text-base leading-[1.2] tracking-[0.06em]"

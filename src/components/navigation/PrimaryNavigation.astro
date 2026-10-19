@@ -8,7 +8,7 @@ const t = useTranslations(locale);
 <nav class="hidden lg:block lg:self-center">
   <ul class="flex flex-wrap gap-x-5 gap-y-3 lg:justify-end">
     {/* Renders each primary desktop navigation item. */}
-    {Object.entries(navigation.en.header.desktopPrimary).map(([key,item]) => (
+    {Object.entries(navigation[locale].header.desktopPrimary).map(([key,item]) => (
       <li class:list={["group relative", { "pb-2": Object.entries(item.children ?? {}).length > 0 }]}>
         <a
           class="font-display uppercase font-bold text-base leading-[1.2] tracking-[0.06em] md:text-[17px] lg:text-lg"
