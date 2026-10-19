@@ -1,0 +1,37 @@
+---
+import { getLocaleFromUrl, useTranslations } from '@/utils/polaris/localization';
+
+const t = useTranslations(getLocaleFromUrl(Astro.url));
+
+interface Props {
+  currentPage?: number;
+  totalPages: number;
+  path: string;
+}
+
+const { currentPage = 1, totalPages, path } = Astro.props;
+---
+<nav class="mt-8 flex items-center justify-center gap-4" aria-label={t.polaris.components.pagination.label}>
+
+  {currentPage === 1 && (
+    <span class="opacity-50" aria-disabled="true">{t.polaris.components.pagination.previous}</span>
+  )}
+
+  {currentPage === 2 && (
+    <a class="hover:underline" href={`${path}`}>{t.polaris.components.pagination.previous}</a>
+  )}
+
+  {currentPage > 2 && (
+      <a class="hover:underline" href={`${path}page/${currentPage - 1}/`}>{t.polaris.components.pagination.previous}</a>
+    )}
+
+  <span>{t.polaris.components.pagination.page} {currentPage} {t.polaris.components.pagination.of} {totalPages}</span>
+
+  {currentPage === totalPages && (
+    <span class="opacity-50" aria-disabled="true">{t.polaris.components.pagination.next}</span>
+  )}
+
+  {currentPage < totalPages && (
+    <a class="hover:underline" href={`${path}page/${currentPage + 1}/`}>{t.polaris.components.pagination.next}</a>
+  )}
+</nav>

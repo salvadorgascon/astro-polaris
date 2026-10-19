@@ -4,12 +4,14 @@ import { lastModified } from './last_modified';
 import { pagination } from './pagination';
 import { yesNoField } from './yes_no_field';
 import { social } from './social';
+import { headerNavigationRight } from './headerNavigationRight';
 
 export const components = {
   acceptPrivacyField,
   audioPlayer,  
   lastModified,
   pagination,  
+  headerNavigationRight,
   yesNoField,
   social,
 } as const;

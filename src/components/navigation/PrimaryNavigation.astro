@@ -1,0 +1,39 @@
+---
+import { navigation } from '@/config/site/navigation';
+import { getLocaleFromUrl, useTranslations} from '@/utils/polaris/localization';
+
+const locale = getLocaleFromUrl(Astro.url);
+const t = useTranslations(locale);
+---
+<nav class="hidden lg:block lg:self-center">
+  <ul class="flex flex-wrap gap-x-5 gap-y-3 lg:justify-end">
+    {/* Renders each primary desktop navigation item. */}
+    {Object.entries(navigation.en.header.desktopPrimary).map(([key,item]) => (
+      <li class:list={["group relative", { "pb-2": Object.entries(item.children ?? {}).length > 0 }]}>
+        <a
+          class="font-display uppercase font-bold text-base leading-[1.2] tracking-[0.06em] md:text-[17px] lg:text-lg"
+          href={item.route}
+          title={item.hint || item.label}
+        >
+          {item.label}
+        </a>
+        {Object.entries(item.children ?? {}).length > 0 && (
+          <ul class="invisible absolute left-0 top-full z-10 min-w-48 border border-black/10 bg-white p-3 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            {/* Renders nested navigation items when a menu has children. */}
+            {Object.entries(item.children ?? {}).map(([subkey, subitem]) => (
+              <li>
+                <a
+                  class="block whitespace-nowrap py-2 font-display text-sm uppercase tracking-[0.06em]"
+                  href={subitem.route}
+                  title={subitem.hint || subitem.label}
+                >
+                  {subitem.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
+    ))}
+  </ul>
+</nav>

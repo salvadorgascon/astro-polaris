@@ -18,19 +18,17 @@ const enMobilePrimaryLinks: NavigationMenu = {
     route: routes.home },
 };
 
-const bottomLinks: NavigationLinks = {  
+const enBottomLinks: NavigationLinks = {  
 };
 
 export const navigation = {
   en:{
-    top: { links: enTopLinks },
+    top: enTopLinks,
     header: {
-      desktopPrimary: { links: enDesktopPrimaryLinks },
-      mobilePrimary: { links: enMobilePrimaryLinks },
+      desktopPrimary: enDesktopPrimaryLinks,
+      mobilePrimary: enMobilePrimaryLinks,
     },
-    bottom: {
-      links: bottomLinks,
-    },
+    bottom: enBottomLinks,
   }
   
 } as const;

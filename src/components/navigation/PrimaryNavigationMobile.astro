@@ -1,0 +1,42 @@
+---
+import { getLocaleFromUrl, useTranslations } from '@/utils/polaris/localization';
+import { navigation } from '@/config/site/navigation';
+
+const locale = getLocaleFromUrl(Astro.url);
+const t = useTranslations(locale);
+---
+<nav
+  id="mobile-menu"
+  class="mt-4 hidden border-t border-black/10 pt-4 lg:hidden"
+>
+  <ul class="flex flex-col gap-4">
+    {/* Renders each primary mobile navigation item. */}
+    {Object.entries(navigation.en.header.mobilePrimary).map(([key, item]) => (
+      <li>
+        <a
+          class="font-display block uppercase font-bold text-base leading-[1.2] tracking-[0.06em]"
+          href={item.route}
+          title={item.hint || item.label}
+        >
+          {item.label}
+        </a>
+        {Object.entries(item.children ?? {}).length > 0 && (
+          <ul class="mt-2 flex flex-col gap-2 border-l border-black/20 pl-4">
+            {/* Renders nested mobile navigation items when a menu has children. */}
+            {Object.entries(item.children ?? {}).map(([subkey, subitem]) => (
+              <li>
+                <a
+                  class="font-display block text-sm uppercase tracking-[0.06em]"
+                  href={subitem.route}
+                  title={subitem.hint || subitem.label}
+                >
+                  {subitem.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
+    ))}
+  </ul>
+</nav>

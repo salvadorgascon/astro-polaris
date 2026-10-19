@@ -1,25 +1,20 @@
 ---
 import { navigation } from '@/config/site/navigation';
 import { siteSettings } from '@/config/site/settings';
-import type { LocalizedNavigationLinks } from '@/i18n/types/navigation.types';
-import type { NavigationLink } from '@/config/types/navigation.types';
-import { ui } from '@/i18n/ui';
+import { getLocaleFromUrl, useTranslations } from '@/utils/polaris/localization';
 
 import LinkText from '@/components/ui/links/LinkText.astro';
 
-const locale = ui[siteSettings.defaultLocale];
-const bottomLinks: [string, NavigationLink][] = Object.entries(navigation.bottom.links);
-const localizedBottomLinks: LocalizedNavigationLinks = locale.site.navigation.bottom.links;
+const locale = getLocaleFromUrl(Astro.url);
+const t = useTranslations(locale);
 ---
 <div class="ml-auto flex items-center gap-2">
   {/* Renders each localized bottom-bar link with separators. */}
-  {bottomLinks.map(([key, link], index) => {
-    const text = localizedBottomLinks[key]?.label ?? '';
-
+  {Object.entries(navigation.en.bottom).map(([key, link], index) => {
     return (
       <Fragment>
         {index > 0 && <p> • </p>}
-        <span><LinkText url={link.route}>{text}</LinkText></span>
+        <span><LinkText url={link.route}>{link.label}</LinkText></span>
       </Fragment>
     );
   })}

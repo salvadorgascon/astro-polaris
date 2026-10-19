@@ -1,0 +1,15 @@
+---
+import { getLocaleFromUrl, useTranslations} from '@/utils/polaris/localization';
+import { routes } from '@/config/site/routes';
+const locale = getLocaleFromUrl(Astro.url);
+const t = useTranslations(locale);
+---
+<div>
+  <a
+    class="font-display text-accent text-[40px]/[1.15] font-bold md:text-5xl lg:text-[56px]"
+    href={routes.home}
+  >{t.site.metadata.siteName}</a>
+  <p class="text-muted font-body font-semibold">
+    {t.site.metadata.siteName}
+  </p>
+</div>

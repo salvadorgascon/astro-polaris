@@ -11,7 +11,7 @@ export type NavigationMenuItem = {
   hint?: string;
   route: string;  
 
-  children?: NavigationLink[];
+  children?: NavigationLinks;
 }
 export type NavigationMenu = Record<string, NavigationMenuItem>;
 
