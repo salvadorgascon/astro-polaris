@@ -1,0 +1,108 @@
+---
+import { socialConfig } from '@/config/site/social';
+
+import { getLocaleFromUrl, useTranslations } from '@/utils/polaris/localization';
+
+import LinkText from '@/components/ui/links/LinkText.astro';
+import List from '@/components/ui/lists/List.astro';
+import ListItem from '@/components/ui/lists/ListItem.astro';
+
+import WhatsAppIcon  from '@/components/icons/brand/WhatsApp.astro'; 
+import NewsIcon  from '@/components/icons/object/News.astro'; 
+import YouTubeIcon from '@/components/icons/brand/YouTube.astro';
+import FacebookIcon from '@/components/icons/brand/Facebook.astro';
+import InstagramIcon from '@/components/icons/brand/Instagram.astro';
+import XIcon from '@/components/icons/brand/X.astro';
+
+import BlockTitle from '@/components/ui/typography/BlockTitle.astro';
+
+const t = useTranslations(getLocaleFromUrl(Astro.url));
+---
+<div>
+  <BlockTitle align="center">{t.site.components.footerSocial.title}</BlockTitle>
+  <List align="center">
+    {socialConfig.whatsapp?.url && (
+      <ListItem>
+        <LinkText
+          url={socialConfig.whatsapp.url}
+          openInNewTab={true}
+          class="inline-flex items-center gap-2"
+        >
+          <WhatsAppIcon /> {t.polaris.components.social.whatsapp}
+        </LinkText>
+      </ListItem>
+    )}   
+
+    {socialConfig.whatsappChannel?.url && (
+      <ListItem>
+        <LinkText
+          url={socialConfig.whatsappChannel.url}
+          openInNewTab={true}
+          class="inline-flex items-center gap-2"
+        >
+          <WhatsAppIcon /> {t.polaris.components.social.whatsappChannel}
+        </LinkText>
+      </ListItem>
+    )}
+
+    {socialConfig.newsletter?.url && (
+      <ListItem>
+        <LinkText
+          url={socialConfig.newsletter.url}
+          openInNewTab={true}
+          class="inline-flex items-center gap-2"
+        >
+          <NewsIcon /> {t.polaris.components.social.newsletter}
+        </LinkText>
+      </ListItem>
+    )}
+
+    {socialConfig.youtube?.url && (
+      <ListItem>
+        <LinkText
+          url={socialConfig.youtube.url}
+          openInNewTab={true}
+          class="inline-flex items-center gap-2"
+        >
+          <YouTubeIcon /> {t.polaris.components.social.youtube}
+        </LinkText>
+      </ListItem>
+    )}
+
+    {socialConfig.facebook?.url && (
+      <ListItem>
+        <LinkText
+          url={socialConfig.facebook.url}
+          openInNewTab={true}
+          class="inline-flex items-center gap-2"
+        >
+          <FacebookIcon /> {t.polaris.components.social.facebook}
+        </LinkText>
+      </ListItem>
+    )}
+
+    {socialConfig.instagram?.url && (
+      <ListItem>
+        <LinkText
+          url={socialConfig.instagram.url}
+          openInNewTab={true}
+          class="inline-flex items-center gap-2"
+        >
+          <InstagramIcon /> {t.polaris.components.social.instagram}
+        </LinkText>
+      </ListItem>
+    )}
+
+    {socialConfig.x?.url && (
+      <ListItem>
+        <LinkText
+          url={socialConfig.x.url}
+          openInNewTab={true}
+          class="inline-flex items-center gap-2"
+        >
+          <XIcon /> {t.polaris.components.social.x}
+        </LinkText>
+      </ListItem>
+    )}    
+  </List>        
+</div>

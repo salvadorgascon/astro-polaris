@@ -1,0 +1,15 @@
+---
+import { getLocaleFromUrl, useTranslations } from '@/utils/polaris/localization';
+
+import List from '@/components/ui/lists/List.astro';
+import ListItem from '@/components/ui/lists/ListItem.astro';
+import LinkText from '@/components/ui/links/LinkText.astro';
+import BlockTitle from '@/components/ui/typography/BlockTitle.astro';
+
+const t = useTranslations(getLocaleFromUrl(Astro.url));
+---
+<div>
+  <BlockTitle align="center">{t.site.components.footerCategoryLinks.title}</BlockTitle>
+  <List align="center">
+  </List>
+</div>
