@@ -30,6 +30,9 @@
     "tailwindcss": "^4.3.4"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.12"
+    "@astrojs/check": "^0.9.12",
+    "@types/mustache": "^4.2.6",
+    "@types/node": "^26.6.6",
+    "@types/nodemailer": "^8.0.2"
   }
 }
