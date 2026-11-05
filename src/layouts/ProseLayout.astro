@@ -7,24 +7,27 @@ import Analytics from '@vercel/analytics/astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
 import { ClientRouter } from 'astro:transitions';
 
+import Favicon from '@/components/layout/Favicon.astro';
+
 import Top from '@/components/layout/Top.astro';
 import Header from '@/components/layout/Header.astro';
 import Footer from '@/components/layout/Footer.astro';
 import Bottom from '@/components/layout/Bottom.astro';
+
+
 ---
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />		
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 		<Font cssVariable="--font-display-family" preload />
 		<Font cssVariable="--font-body-family" preload />
 		<Analytics />
 		<SpeedInsights />
+		<Favicon />
 		<ClientRouter fallback="animate" />
 	</head>
 	<body>
