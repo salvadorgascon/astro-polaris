@@ -6,6 +6,11 @@ import '@/assets/styles/global.css';
 import Analytics from '@vercel/analytics/astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
 import { ClientRouter } from 'astro:transitions';
+
+import Top from '@/components/layout/Top.astro';
+import Header from '@/components/layout/Header.astro';
+import Footer from '@/components/layout/Footer.astro';
+import Bottom from '@/components/layout/Bottom.astro';
 ---
 <!doctype html>
 <html lang="en">
@@ -23,7 +28,11 @@ import { ClientRouter } from 'astro:transitions';
 		<ClientRouter fallback="animate" />
 	</head>
 	<body>
-		<slot />		
+		<Top />
+		<Header />
+		<slot />
+		<Footer />
+		<Bottom />
 	</body>
 </html>
 
