@@ -1,4 +1,8 @@
 ---
+import { Font } from 'astro:assets';
+
+import '@/assets/styles/global.css';
+
 import Analytics from '@vercel/analytics/astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
 ---
@@ -11,6 +15,8 @@ import SpeedInsights from '@vercel/speed-insights/astro';
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
+		<Font cssVariable="--font-display-family" preload />
+		<Font cssVariable="--font-body-family" preload />
 		<Analytics />
 		<SpeedInsights />
 	</head>
