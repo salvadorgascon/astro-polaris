@@ -16,6 +16,7 @@ export default defineConfig({
   },
 
   site: 'https://example.com',  
+  trailingSlash: 'always',
   
   integrations: [mdx(), sitemap()],
   adapter: vercel()
