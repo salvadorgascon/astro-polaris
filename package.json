@@ -23,6 +23,8 @@
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.4",
     "astro": "^7.4.5",
+    "mustache": "^4.2.0",
+    "nodemailer": "^10.3.1",
     "tailwindcss": "^4.3.4"
   },
   "devDependencies": {
