@@ -5,6 +5,7 @@ import '@/assets/styles/global.css';
 
 import Analytics from '@vercel/analytics/astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
+import { ClientRouter } from 'astro:transitions';
 ---
 <!doctype html>
 <html lang="en">
@@ -19,10 +20,10 @@ import SpeedInsights from '@vercel/speed-insights/astro';
 		<Font cssVariable="--font-body-family" preload />
 		<Analytics />
 		<SpeedInsights />
+		<ClientRouter fallback="animate" />
 	</head>
 	<body>
-		<slot />
-		
+		<slot />		
 	</body>
 </html>
 
