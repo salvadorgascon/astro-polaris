@@ -14,10 +14,9 @@ import Header from '@/components/layout/Header.astro';
 import Footer from '@/components/layout/Footer.astro';
 import Bottom from '@/components/layout/Bottom.astro';
 
-
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-full scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />		
@@ -30,7 +29,7 @@ import Bottom from '@/components/layout/Bottom.astro';
 		<Favicon />
 		<ClientRouter fallback="animate" />
 	</head>
-	<body>
+	<body class="min-h-full antialiased">
 		<Top />
 		<Header />
 		<slot />
