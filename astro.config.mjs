@@ -17,6 +17,11 @@ export default defineConfig({
 
   site: 'https://example.com',  
   trailingSlash: 'always',
+
+  image: {
+    layout: 'constrained',
+    responsiveStyles: false,
+  },
   
   integrations: [mdx(), sitemap()],
   adapter: vercel()
