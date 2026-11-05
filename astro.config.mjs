@@ -15,6 +15,8 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
+  site: 'https://example.com',  
+  
   integrations: [mdx(), sitemap()],
   adapter: vercel()
 });
