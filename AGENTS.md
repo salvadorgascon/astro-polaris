@@ -1,3 +1,8 @@
+# Astro Polaris Agent Guide
+
+## Overview
+
+Starter template for Astro 7
 
 ## Language
 
