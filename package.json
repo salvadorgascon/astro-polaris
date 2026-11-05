@@ -11,7 +11,10 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "check:astro": "astro check"
+    "check:astro": "astro check",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@astrojs/markdown-satteri": "^0.4.6",
@@ -31,8 +34,16 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.12",
+    "@eslint/js": "^10.0.1",
     "@types/mustache": "^4.2.6",
     "@types/node": "^26.6.6",
-    "@types/nodemailer": "^8.0.2"
+    "@types/nodemailer": "^8.0.2",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-astro": "^3.2.1",
+    "prettier": "^3.9.10",
+    "prettier-plugin-astro": "^1.1.2",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "typescript-eslint": "^8.72.1"
   }
 }
