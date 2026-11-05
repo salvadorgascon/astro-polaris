@@ -1,3 +1,9 @@
+
+## Language
+
+- Write all site content, user-facing copy, functions, variables, and code comments in English.
+- Keep locale-specific translations inside `src/i18n/locales/` and follow the existing locale structure.
+
 ## Development
 
 When starting the dev server, use background mode:
