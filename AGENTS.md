@@ -9,6 +9,12 @@ Starter template for Astro 7
 - Write all site content, user-facing copy, functions, variables, and code comments in English.
 - Keep locale-specific translations inside `src/i18n/locales/` and follow the existing locale structure.
 
+
+## Superpowers artifacts
+
+- Save brainstorming specifications to `docs/superpowers/specs/`.
+- Save implementation plans to `docs/superpowers/plans/`.
+
 ## Development
 
 When starting the dev server, use background mode:
