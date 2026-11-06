@@ -2,3 +2,13 @@
 
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
+
+@theme {
+     /* Font families, requires modify astro.config.mjs */
+  --font-display: var(--font-display-family), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: var(--font-body-family), system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@layer base {
+   
+}
