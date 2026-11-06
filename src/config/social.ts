@@ -1,13 +1,14 @@
-import type { SocialNetworkName, SocialProfile } from '@/config/types/social.types';
+import type { SocialConfig } from '@/config/types/social.types';
 
-export const socialConfig: Record<SocialNetworkName, SocialProfile | undefined> = {
-  x:{    
+export const socialConfig: SocialConfig = {
+  x: {
     handle: 'your-x-username',
-    url: 'https://x.com/', 
+    url: 'https://x.com/',
   },
   facebook: {
     handle: 'your-facebook-username',
     url: 'https://www.facebook.com/',
+    appId: 'your-facebook-app-id',
   },
   youtube: {
     handle: 'your-youtube-username',
