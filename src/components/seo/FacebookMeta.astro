@@ -1,0 +1,10 @@
+---
+interface Props {  
+  appId: string;  
+}
+
+const { appId } = Astro.props;
+
+---
+<meta property='fb:admins' content='Facebook ID ' />
+<meta property="fb:app_id" content={appId} />
