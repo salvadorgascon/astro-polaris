@@ -23,7 +23,9 @@ import Favicon from '@/components/layout/Favicon.astro';
 		<Favicon />
 		<ClientRouter fallback="animate" />
 	</head>
-	<body class="min-h-screen antialiased">		
-		<slot />		
+	<body class="min-h-screen antialiased  flex flex-col">		
+		<main class="flex-1">      
+      		<slot />										
+		</main>		
 	</body>
 </html>
