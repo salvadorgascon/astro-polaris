@@ -30,10 +30,14 @@ import Bottom from '@/components/layout/Bottom.astro';
 		<Favicon />
 		<ClientRouter fallback="animate" />
 	</head>
-	<body class="min-h-screen antialiased">		
+	<body class="min-h-screen antialiased flex flex-col">		
 		<Top />
-		<Header />
-		<slot />
+		<Header />		
+		<main class="flex-1 py-10">
+  			<article class="prose prose-lg mx-auto px-4 sm:px-6 lg:prose-xl dark:prose-invert">
+    			<slot />
+  			</article>
+		</main>
 		<Footer />
 		<Bottom />
 	</body>
