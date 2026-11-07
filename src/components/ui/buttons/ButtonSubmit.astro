@@ -1,0 +1,9 @@
+---
+interface Props {  
+  id: string;  
+}
+
+const { id } = Astro.props;
+---
+<button id={id} type="submit"
+  class="py-4 px-7 bg-brand-500 rounded-lg border border-brand-outline hover:bg-brand-accent text-base leading-[1.1] tracking-[0.02em] md:text-[17px] lg:text-lg font-semibold text-link uppercase flex items-center justify-center"><slot/></button>
