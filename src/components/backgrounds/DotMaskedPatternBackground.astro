@@ -1,0 +1,15 @@
+---
+interface Props {
+	class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+<div
+	class:list={[
+		"pointer-events-none h-full w-full bg-[radial-gradient(circle_at_0.5px_0.5px,rgba(0,0,0,0.3)_0.5px,transparent_0)] dark:bg-[radial-gradient(circle_at_0.5px_0.5px,rgba(255,255,255,0.3)_0.5px,transparent_0)] mask-[radial-gradient(circle_at_center,white,transparent)] bg-repeat bg-size-[8px_8px]",
+		className,
+	]}  
+>
+<slot/>
+</div>
