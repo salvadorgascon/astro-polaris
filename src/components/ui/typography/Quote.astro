@@ -1,0 +1,7 @@
+---
+const hasAuthor = Astro.slots.has('author');
+---
+<blockquote class="border-solid border-l-[5px] border-l-[#eee] ps-3">
+  <slot/>
+  {hasAuthor && <> - <slot name="author" /></>}
+</blockquote>
