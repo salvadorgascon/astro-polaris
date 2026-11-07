@@ -1,0 +1,11 @@
+---
+interface Props {  
+  number: number;
+}
+
+const { number } = Astro.props;
+---
+<li class="flex items-center">  
+  <span class="inline-flex items-center mr-2">{number}</span>
+  <slot />
+</li>
