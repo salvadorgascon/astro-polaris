@@ -1,0 +1,13 @@
+---
+interface Props {
+  url: string;
+  openInNewTab?: boolean;
+}
+
+const { url, openInNewTab = false } = Astro.props;
+---
+<a 
+  href={url}
+  target={openInNewTab ? "_blank" : undefined}
+  rel={openInNewTab ? "noopener noreferrer" : undefined}
+  class="py-4 px-7 rounded-lg border border-accent-soft hover:border-accent-emphasis text-base leading-[1.1] tracking-[0.02em] md:text-[17px] lg:text-lg font-semibold text-link uppercase flex items-center justify-center"><slot/></a>
