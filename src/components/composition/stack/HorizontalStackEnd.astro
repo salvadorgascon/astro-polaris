@@ -1,0 +1,11 @@
+---
+interface Props {
+  class?: string;
+  gap?: string;
+}
+
+const { class: className = '', gap = 'gap-4' } = Astro.props;
+---
+<div class:list={['flex flex-col md:flex-row justify-end items-end', gap, className]}>
+  <slot />
+</div>
