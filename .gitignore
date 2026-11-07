@@ -155,3 +155,15 @@ vite.config.ts.timestamp-*
 # jetbrains setting folder
 .idea/
 .vercel
+.vercel/
+
+# Graphify output directory
+graphify-out/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+.playwright-cli/
